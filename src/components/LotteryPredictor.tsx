@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, TrendingUp, Target, Crown } from 'lucide-react';
+import { Sparkles, TrendingUp, Target, Crown, Facebook, Instagram, TikTok } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface PredictionResult {
@@ -74,6 +73,8 @@ const LotteryPredictor = () => {
     }
 
     setIsGenerating(true);
+    // Reset animation state
+    setAnimateCards(false);
     
     // Simular procesamiento con delay
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -124,12 +125,12 @@ const LotteryPredictor = () => {
         <div className="flex items-center justify-center mb-4">
           <Crown className="w-12 h-12 text-casino-gold mr-4 animate-glow-pulse" />
           <h1 className="text-5xl font-bold text-shimmer">
-            El Crack de las Loterías
+            Tendencias de Draculitto
           </h1>
           <Crown className="w-12 h-12 text-casino-gold ml-4 animate-glow-pulse" />
         </div>
         <p className="text-xl text-slate-300 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          Sistema Pronosticador para Ruletas de 38 Animalitos
+          ¡Coloque su numero de la suerte!
         </p>
       </div>
 
@@ -168,8 +169,8 @@ const LotteryPredictor = () => {
                     </div>
                   ) : (
                     <div className="flex items-center">
-                      <TrendingUp className="w-5 h-5 mr-2" />
-                      Obtener Pronóstico
+                      <TrendingUp className="w-5 h-5 mr-2 text-red-600" />
+                      ¡Pronosticar numero!
                     </div>
                   )}
                 </Button>
@@ -230,6 +231,22 @@ const LotteryPredictor = () => {
               </CardContent>
             </Card>
           )}
+
+          {/* Social Media and Brand */}
+          <div className="mt-8 text-center">
+            <div className="text-center text-casino-gold text-3xl font-bold mb-4">DRACULOTTO</div>
+            <div className="flex justify-center space-x-6 mt-4">
+              <a href="#" className="text-white hover:text-casino-gold transition-colors">
+                <Facebook className="w-8 h-8" />
+              </a>
+              <a href="#" className="text-white hover:text-casino-gold transition-colors">
+                <Instagram className="w-8 h-8" />
+              </a>
+              <a href="#" className="text-white hover:text-casino-gold transition-colors">
+                <TikTok className="w-8 h-8" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
