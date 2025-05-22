@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Sparkles, TrendingUp, Target, Crown, Facebook, Instagram } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -265,6 +267,62 @@ const LotteryPredictor = () => {
               </a>
             </div>
           </div>
+
+          {/* Lottery Brands */}
+          <div className="mt-10 mb-6">
+            <Separator className="bg-casino-gold/20 mb-6" />
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+              {/* LOTTO ACTIVO */}
+              <div className="lottery-brand">
+                <div className="h-16 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-casino-gold/20 flex items-center justify-center">
+                    <span className="text-xl font-bold text-casino-gold">LA</span>
+                  </div>
+                </div>
+                <div className="text-casino-gold font-bold text-lg mt-2">LOTTO ACTIVO</div>
+              </div>
+
+              {/* GRANJITA */}
+              <div className="lottery-brand">
+                <div className="h-16 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-casino-gold/20 flex items-center justify-center">
+                    <span className="text-xl font-bold text-casino-gold">G</span>
+                  </div>
+                </div>
+                <div className="text-casino-gold font-bold text-lg mt-2">GRANJITA</div>
+              </div>
+
+              {/* SELVA */}
+              <div className="lottery-brand">
+                <div className="h-16 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-casino-gold/20 flex items-center justify-center">
+                    <span className="text-xl font-bold text-casino-gold">S</span>
+                  </div>
+                </div>
+                <div className="text-casino-gold font-bold text-lg mt-2">SELVA</div>
+              </div>
+
+              {/* LOTTO VENEZUELA */}
+              <div className="lottery-brand">
+                <div className="h-16 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-casino-gold/20 flex items-center justify-center">
+                    <span className="text-xl font-bold text-casino-gold">LV</span>
+                  </div>
+                </div>
+                <div className="text-casino-gold font-bold text-lg mt-2">LOTTO VENEZUELA</div>
+              </div>
+
+              {/* RULETON BRASIL */}
+              <div className="lottery-brand">
+                <div className="h-16 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-casino-gold/20 flex items-center justify-center">
+                    <span className="text-xl font-bold text-casino-gold">RB</span>
+                  </div>
+                </div>
+                <div className="text-casino-gold font-bold text-lg mt-2">RULETON BRASIL</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -275,5 +333,34 @@ const LotteryPredictor = () => {
     </div>
   );
 };
+
+const FloatingParticles = () => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    {[...Array(20)].map((_, i) => (
+      <div
+        key={i}
+        className="floating-particles"
+        style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`,
+          animationDelay: `${Math.random() * 6}s`,
+          animationDuration: `${4 + Math.random() * 4}s`
+        }}
+      />
+    ))}
+  </div>
+);
+
+const NumberCard = ({ number, index }: { number: number; index: number }) => (
+  <div 
+    className={`number-card p-6 text-center ${animateCards ? 'animate-number-reveal' : ''}`}
+    style={{ animationDelay: `${index * 0.2}s` }}
+  >
+    <div className="text-3xl font-bold text-casino-gold mb-2">{number}</div>
+    <div className="text-sm text-slate-300">
+      {index === 0 ? 'Principal' : index === 1 ? 'Segundo' : 'Tercero'}
+    </div>
+  </div>
+);
 
 export default LotteryPredictor;
