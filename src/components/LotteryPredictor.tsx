@@ -1,8 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, TrendingUp, Target, Crown, Facebook, Instagram, TikTok } from 'lucide-react';
+import { Sparkles, TrendingUp, Target, Crown, Facebook, Instagram, Youtube } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface PredictionResult {
@@ -243,7 +244,7 @@ const LotteryPredictor = () => {
                 <Instagram className="w-8 h-8" />
               </a>
               <a href="#" className="text-white hover:text-casino-gold transition-colors">
-                <TikTok className="w-8 h-8" />
+                <Youtube className="w-8 h-8" />
               </a>
             </div>
           </div>
