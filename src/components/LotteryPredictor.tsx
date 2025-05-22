@@ -126,7 +126,7 @@ const LotteryPredictor = () => {
         <div className="flex items-center justify-center mb-4">
           <Crown className="w-12 h-12 text-casino-gold mr-4 animate-glow-pulse" />
           <h1 className="text-5xl font-bold text-shimmer">
-            Tendencias de Draculitto
+            Tendencias de DRACULOTTO
           </h1>
           <Crown className="w-12 h-12 text-casino-gold ml-4 animate-glow-pulse" />
         </div>
@@ -237,13 +237,13 @@ const LotteryPredictor = () => {
           <div className="mt-8 text-center">
             <div className="text-center text-casino-gold text-3xl font-bold mb-4">DRACULOTTO</div>
             <div className="flex justify-center space-x-6 mt-4">
-              <a href="#" className="text-white hover:text-casino-gold transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=100090371612857" target="_blank" rel="noopener noreferrer" className="text-white hover:text-casino-gold transition-colors">
                 <Facebook className="w-8 h-8" />
               </a>
-              <a href="#" className="text-white hover:text-casino-gold transition-colors">
+              <a href="https://www.instagram.com/draculotto/?igsh=MWF5NnlqOTZ3Y2ZzMQ%3D%3D#" target="_blank" rel="noopener noreferrer" className="text-white hover:text-casino-gold transition-colors">
                 <Instagram className="w-8 h-8" />
               </a>
-              <a href="#" className="text-white hover:text-casino-gold transition-colors">
+              <a href="https://www.tiktok.com/@draculotto?_t=ZM-8wZnVtnE80O&_r=1" target="_blank" rel="noopener noreferrer" className="text-white hover:text-casino-gold transition-colors">
                 <Youtube className="w-8 h-8" />
               </a>
             </div>
