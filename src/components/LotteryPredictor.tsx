@@ -1,10 +1,27 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, TrendingUp, Target, Crown, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Sparkles, TrendingUp, Target, Crown, Facebook, Instagram } from 'lucide-react';
 import { toast } from 'sonner';
+
+// We need to create a custom TikTok icon since it's not available in lucide-react
+const TikTokIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+  </svg>
+);
 
 interface PredictionResult {
   numbers: number[];
@@ -244,7 +261,7 @@ const LotteryPredictor = () => {
                 <Instagram className="w-8 h-8" />
               </a>
               <a href="https://www.tiktok.com/@draculotto?_t=ZM-8wZnVtnE80O&_r=1" target="_blank" rel="noopener noreferrer" className="text-white hover:text-casino-gold transition-colors">
-                <Youtube className="w-8 h-8" />
+                <TikTokIcon className="w-8 h-8" />
               </a>
             </div>
           </div>
